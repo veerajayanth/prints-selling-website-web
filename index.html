@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+ 	<script  src="https://www.gstatic.com/firebasejs/7.14.3/firebase-database.js"></script>
+ 	<script  src="https://www.gstatic.com/firebasejs/7.14.3/firebase-auth.js"></script>
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
+	
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "key",
+    authDomain: "xxx.firebaseapp.com",
+    databaseURL: "https://xx.firebaseio.com",
+    projectId: "xxx",
+    storageBucket: "xxx.appspot.com",
+    messagingSenderId: "",
+    appId: "",
+    measurementId: ""
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+	<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+	<link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+	<link rel="stylesheet" type="text/css" href="resources/css/style.css">
+	<link rel="stylesheet" type="text/css" href="resources/css/queries.css">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet"> 
+
+	<title>vee_jay</title>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/resources/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/resources/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/resources/favicons/favicon-16x16.png">
+	<link rel="manifest" href="/resources/favicons/site.webmanifest">
+	<link rel="mask-icon" href="/resources/favicons/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="/resources/favicons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#ffc40d">
+	<meta name="msapplication-config" content="/resources/favicons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+	<header>
+		<nav ><!--class="sticky"-->
+			<div class="row">
+				<img src="resources/img/logo.png" alt="logo" class="logo">
+				<a class="mobile-nav-icon js--nav-icon"><ion-icon class="mobsdash" name="compass-sharp"></ion-icon></a>
+				<ul class="main-nav js--main-nav">
+					<li> <a href="#delivery">Product delivery</a></li>
+					<li> <a href="#working">How it works</a></li>
+					<li> <a href="#cities">Photographers</a></li>
+					<li> <a href="#signup">signup</a></li>
+					<li> <a href="signup.html">Login</a></li>
+
+				</ul>
+			</div>
+		</nav>
+		<div class="hero-text-box">
+			<h1>Frame it!<br> And cherish...</h1>
+			<a class="btn btn-full js--scroll-to-plans" href="#">frameit!</a>
+			<a class="btn btn-ghost js--scroll-to-start" href="#">Show  me more!</a>
+		</div>
+	</header>
+
+	<section class="section-features js--section-features" id="delivery">
+		<div class="row">
+			<h2>Get prints &mdash; frames &mdash; banners of photographs</h2>
+			<p class="long-copy">Hello, we're vee_jay, your new premium prints and frames delivery service,we have our custom made prints pictured by professional photographers. we're really good at it, we promise!</p>
+		</div>
+
+		<div class="row js--wp-1">
+			<div class="col span-1-of-4 box">
+				<ion-icon class ="icon-big" name="infinite-sharp"></ion-icon>				
+				<h3>Bulk ordering</h3>
+				<p>The infinte amount of bulk ordering can be taken order and delivered in a short period of time with customized boxing and a free of cost delivery!</p>
+			</div>
+			<div class="col span-1-of-4 box">
+				<ion-icon class ="icon-big" name="ribbon"></ion-icon>
+				<h3>Good quality</h3>
+				<p>We offer u a quality products and every product undergoes a three cycles quality checking.The photographs are printed in a high quality photo papers.</p>
+			</div>
+			<div class="col span-1-of-4 box">
+				<ion-icon class ="icon-big" name="wallet"></ion-icon>
+				<h3>Cost efficient</h3>
+				<p>Our good quality products in our websites costs less unlike amazon and flipkart etc.,The products can be delivered within the Tamilnadu.</p>
+			</div>
+			<div class="col span-1-of-4 box">
+				<ion-icon class ="icon-big" name="cart"></ion-icon>
+				<h3>Order anything</h3>
+				<p>Never compromise quality, quantity and cost and feel free to order anything whatever you want in this cart!</p>
+			</div>
+		</div>
+	</section>
+	
+	<section class="section-steps" id="working">
+		<div class ="row">
+			<h2>How it works &mdash; Simple as 1,2,3</h2>
+		</div>
+		<div class="row">
+			<div class="col span-1-of-2">
+				<img src="resources/img/app-iPhone.png" class="app-screen js--wp-2">
+			</div>
+			<div class="col span-1-of-2">
+				
+				<div class="works-step">
+					<div>1</div>
+					<p>Choose the Products to purchase!
+					</p>
+				</div>
+				<div class="works-step">
+					<div>2</div>
+					<p>Order your products through gpay or cod!
+					</p>
+				</div>
+				<div class="works-step">
+					<div>3</div>
+					<p>You will get your awesome products in two days!
+					</p>
+				</div>
+				<a href="#" class="btn-app"><img src="resources/img/download-app.svg"></a>
+				<a href="#" class="btn-app"><img src="resources/img/download-app-android.png"></a>
+			</div>
+
+		</div>
+	</section>
+	<section class="section-cities" id="cities">
+		<div class="row">
+			<h2>Our best photographers</h2>
+		</div>
+		<div class="row  js--wp-3">
+			<div class="col span-1-of-4 box">
+				<img src="resources/img/lisbon-3.jpg">
+				<h3>lisbon</h3>
+				<div class="city-features">
+					<ion-icon class="icon-small" name="person"></ion-icon>
+					1000+ happy buyers!
+				</div>
+				<div class="city-features">
+					<ion-icon class="icon-small" name="camera"></ion-icon>
+					Wildlife Photography.
+				</div>
+				<div class="city-features">
+					<ion-icon class="icon-small" name="logo-instagram"></ion-icon>
+					<a href="#">@__vee_jay</a>
+				</div>
+			</div>
+			<div class="col span-1-of-4 box">
+				<img src="resources/img/london.jpg">
+				<h3>London</h3>
+				<div class="city-features">
+					<ion-icon class="icon-small" name="person"></ion-icon>
+					1000+ happy buyers!
+				</div>
+				<div class="city-features">
+					<ion-icon class="icon-small" name="camera"></ion-icon>
+					Aesthetic Photography.
+				</div>
+				<div class="city-features">
+					<ion-icon class="icon-small" name="logo-instagram"></ion-icon>
+					<a href="#">@__vee_jay</a>
+				</div>
+			</div>
+			<div class="col span-1-of-4 box">
+				<img src="resources/img/san-francisco.jpg">
+				<h3>Sanfransisco</h3>
+				<div class="city-features">
+					<ion-icon class="icon-small" name="person"></ion-icon>
+					1000+ happy buyers!
+				</div>
+				<div class="city-features">
+					<ion-icon class="icon-small" name="camera"></ion-icon>
+					B/W Photography.
+				</div>
+				<div class="city-features">
+					<ion-icon class="icon-small" name="logo-instagram"></ion-icon>
+					<a href="#">@__vee_jay</a>
+				</div>
+			</div>
+			<div class="col span-1-of-4 box">
+				<img src="resources/img/berlin.jpg">
+				<h3>Berlin</h3>
+				<div class="city-features">
+					<ion-icon class="icon-small" name="person"></ion-icon>
+					1000+ happy buyers!
+				</div>
+				<div class="city-features">
+					<ion-icon class="icon-small" name="camera"></ion-icon>
+					Portrait Photography.
+				</div>
+				<div class="city-features">
+					<ion-icon class="icon-small" name="logo-instagram"></ion-icon>
+					<a href="#">@__vee_jay</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section-testimonials">
+		<div class="row">
+			<h2>The Reviews from our buyers!</h2>
+			
+		</div>
+		<div class="row">
+			<div class="col  span-1-of-3">
+				<blockquote>
+					The landscape frame is awesome.Everytime i wake up seeing those frames!mesmerising effects!
+					<cite><img src="resources/img/customer-1.jpg">Ranjith</cite>
+				</blockquote>
+			</div>
+			<div class="col span-1-of-3">
+				<blockquote>
+					The landscape frame is awesome.Everytime i wake up seeing those frames!mesmerising effects!
+					<cite><img src="resources/img/customer-2.jpg">Rebecca</cite>
+				</blockquote>
+			</div>
+			<div class="col span-1-of-3">
+				<blockquote>
+					The landscape frame is awesome.Everytime i wake up seeing those frames!mesmerising effects!
+					<cite><img src="resources/img/customer-3.jpg">Ram</cite>
+				</blockquote>
+			</div>
+			
+		</div>
+	</section>
+	<section class="section-plans js--section-plans" id="signup">
+		<div class="row">
+			<h2>Join in our Community today!</h2>
+			
+		</div>
+		<div class="row">
+			<div class="col span-1-of-3">
+				<div class="plan-box js--wp-4">
+					<div>
+						<h3>Premium</h3>
+						<p class="plan-price">500 <span>/12month</span></p>
+						<p class="plan-price-jumbo">2 purchase benits per month</p>
+					</div>
+					<div>
+						<ul>
+							<li><ion-icon class="icon-small" name="checkmark"></ion-icon>Nextday delivery</li>
+							<li><ion-icon class="icon-small" name="checkmark"></ion-icon>Free delivery</li>
+							<li><ion-icon class="icon-small" name="checkmark"></ion-icon>Free Miniframe</li>
+							<li><ion-icon class="icon-small" name="checkmark"></ion-icon>Free gift pack</li>
+						</ul>
+					</div>
+					<div>
+						<a href="signup.html" class="btn btn-full">Signup now!</a>
+					</div>
+				</div>
+
+			</div>
+			<div class="col span-1-of-3">
+				<div class="plan-box">
+					<div>
+						<h3>Pro</h3>
+						<p class="plan-price">300 <span>/6month</span></p>
+						<p class="plan-price-jumbo">1 purchase benefit per month</p>
+					</div>
+					<div>
+						<ul>
+							<li><ion-icon class="icon-small" name="checkmark"></ion-icon>Within 3days delivery</li>
+							<li><ion-icon class="icon-small" name="checkmark"></ion-icon>Free delivery</li>
+							<li><ion-icon class="icon-small" name="checkmark"></ion-icon>Keychain</li>
+							<li><ion-icon class="icon-small" name="checkmark"></ion-icon>Free gift pack</li>
+						</ul>
+					</div>
+					<div>
+						<a href="#" class="btn btn-ghost">Signup now!</a>
+					</div>
+				</div>
+
+			</div>
+			<div class="col span-1-of-3">
+				<div class="plan-box">
+					<div>
+						<h3>STARTER</h3>
+						<p class="plan-price">FREE <span>unlimited</span></p>
+						<p class="plan-price-jumbo">Best comes at free!</p>
+					</div>
+					<div>
+						<ul>
+							<li><ion-icon class="icon-small" name="checkmark"></ion-icon>Within week delivery</li>
+							<li><ion-icon class="icon-small" name="checkmark"></ion-icon>Freedelivery above 500</li>
+							<li><ion-icon class="icon-small" name="checkmark"></ion-icon>&mdash;</li>
+							<li><ion-icon class="icon-small" name="checkmark"></ion-icon>&mdash;</li>
+						</ul>
+					</div>
+					<div>
+						<a href="#" class="btn btn-ghost">Signup now!</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		
+	</section>
+	<section class="section-form">
+		<div class="row">
+			<h2>We're happy to hear from you</h2>
+			
+		</div>
+		<div class="row">
+			<form method="post" action="#" class="contact-form">
+				<div class="row">
+					<div class="col span-1-of-3">
+						<label for="name">Name</label>
+					</div>
+					<div class="col span-2-of-3">
+						<input type="text" name="name" id="name" placeholder="Your name" required>
+					</div>
+					
+				</div>
+				<div class="row">
+					<div class="col span-1-of-3">
+						<label for="email">Email</label>
+					</div>
+					<div class="col span-2-of-3">
+						<input type="email" name="email" id="email" placeholder="Your email" required>
+					</div>
+					
+				</div>
+				<div class="row">
+					<div class="col span-1-of-3">
+						<label for="find-us
+						">How did you find us?</label>
+					</div>
+					<div class="col span-2-of-3">
+						<select name="find-us" id="find-us">
+							<option value="friends" selected="">Friends</option>
+							<option value="search">Search engine</option>
+							<option value="ad">Advertisement</option>
+							<option value="other">Other</option>
+						</select>
+						
+					</div>
+
+				</div>
+				<div class="row">
+					<div class="col span-1-of-3">
+						<label for="news">Newsletter?</label>
+					</div>
+					<div class="col span-2-of-3">
+						<input type="checkbox" name="news" id="news" checked>Yes,Pease!
+					</div>
+					
+				</div>
+				<div class="row">
+					<div class="col span-1-of-3">
+						<label>Drop us a line</label>
+					</div>
+					<div class="col span-2-of-3">
+						<textarea name="message" placeholder="Your message"></textarea>
+					</div>
+					
+				</div>
+				<div class="row">
+					<div class="col span-1-of-3">
+						<label>&nbsp;</label>
+					</div>
+					<div class="col span-2-of-3">
+						<input type="submit" value="Send it">
+					</div>
+					
+				</div>
+			</form>
+		</div>
+	</section>
+	<footer>
+		<div class="row">
+			<div class="col span-1-of-2">
+				<ul class="footer-nav">
+					<li><a href="#">About us</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Press</a></li>
+					<li><a href="#">App</a></li>
+				</ul>
+			</div>
+			<div class="col span-1-of-2">
+				<ul class="social-links">
+					<li><a href="#"> <ion-icon class="facebook" name="logo-facebook"></ion-icon></a></li>
+					<li><a href="#"> <ion-icon class="twitter"  name="logo-twitter"></ion-icon></a></li>
+					<li><a href="#"> <ion-icon class="instagram"  name="logo-instagram"></ion-icon></a></li>
+					<li><a href="#"> <ion-icon class="google"  name="logo-google"></ion-icon></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<p>
+				Copyright &copy; 2020.All rights reserved.
+			</p>
+			
+		</div>
+	</footer>
+	<!--The HTML5 Shiv enables use of HTML5 sectioning elements in legacy Internet Explorer and provides basic HTML5 styling for Internet Explorer 6-9, Safari 4.x (and iPhone 3.x), and Firefox 3.x.-->
+			<script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+
+			<!-- selectivizr is a JavaScript utility that emulates CSS3 pseudo-classes and attribute selectors in Internet Explorer 6-8.  -->
+			<script src="https://cdn.jsdelivr.net/npm/selectivizr@1.0.3/selectivizr.min.js"></script>
+
+
+
+			<!--GOOGLE HOSTED LIBRARIES-->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+			<script src="resources/js/script.js" type="text/javascript"></script>
+
+			<script src="vendors/js/jquery.waypoints.min.js" type="text/javascript"></script>
+
+
+</body>
+
+			
+
+
+</html>

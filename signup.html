@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+ 	<script  src="https://www.gstatic.com/firebasejs/7.14.3/firebase-database.js"></script>
+ 	<script  src="https://www.gstatic.com/firebasejs/7.14.3/firebase-auth.js"></script>
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
+	
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDbJCI5e6c9N9hXIUXAzko2sAvJwGwyTOU",
+    authDomain: "testings-5fedc.firebaseapp.com",
+    databaseURL: "https://testings-5fedc.firebaseio.com",
+    projectId: "testings-5fedc",
+    storageBucket: "testings-5fedc.appspot.com",
+    messagingSenderId: "486096393338",
+    appId: "1:486096393338:web:b524ef7ae66a43595dd7c3",
+    measurementId: "G-730KEMB7W6"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+	<link rel="stylesheet" type="text/css" href="resources/css/signupsstyle.css">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+	<title></title>
+</head>
+<body>
+	<header>
+		<nav class="sticky">
+			<div class="row">
+				<img src="resources/img/logo.png" alt="logo" class="logo">
+				<ul class="main-nav">
+					<li> <a href="index.html">Home</a></li>
+					<li><form class="signinss">	<input type="email" id="signinmail" name="" placeholder="Enter email" required=""> <input type="password" name="" id="signinpwd" placeholder="your password" required=""> <input type="submit" onclick="signin()" value="Login" name="">	</form></li>
+
+				</ul>
+			</div>
+		</nav>
+
+		<div class="row product-box">
+			<div class="col span-2-of-2 cols">
+				<div class="row">
+					<h3>New Customer? Join here!</h3>
+					<br>	
+				</div>
+				<form method="post" action="#" class="contact-form">
+					<div class="row">
+						<div class="col span-1-of-3">
+							<label for="cname">Name</label>
+						</div>
+						<div class="col span-2-of-3">
+							<input type="text" name="name" id="cname" placeholder="Your name" required>
+						</div>
+						
+					</div>
+					<div class="row">
+						<div class="col span-1-of-3">
+							<label for="cemail">Email</label>
+						</div>
+						<div class="col span-2-of-3">
+							<input type="email" name="email" id="cemail" placeholder="Your email" required>
+						</div>
+						
+					</div>
+					<div class="row">
+						<div class="col span-1-of-3">
+							<label for="cmembership
+							">Membership</label>
+						</div>
+						<div class="col span-2-of-3">
+							<select name="membership" id="cmembership">
+								<option value="premium" selected="">Premium</option>
+								<option value="pro">Pro</option>
+								<option value="free">Free</option>	
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col span-1-of-3">
+							<label for="number">Contact.no:</label>
+						</div>
+						<div class="col span-2-of-3">
+							<input type="number" name="phone" id="cphone" placeholder="Your phone number" required>
+						</div>
+						
+					</div>
+					<div class="row">
+						<div class="col span-1-of-3">
+							<label for="cpassword">Password</label>
+						</div>
+						<div class="col span-2-of-3">
+							<input type="password" name="password" id="cpassword" placeholder="your password" required>
+						</div>
+						
+					</div>
+					<div class="row">
+					<div class="col span-1-of-3">
+						<label>&nbsp;</label>
+					</div>
+					<div class="col span-2-of-3">
+						<input type="submit" value="Sign up" onclick="authenticatecustomer()">
+					</div>
+					
+				</div>
+				</form>
+			</div>
+			
+		</div>				
+	</header>
+	<script>
+		function signin() {
+			// body...
+			var email=document.getElementById('signinmail').value;
+  			var password=document.getElementById('signinpwd').value;
+  			//Sign In User with Email and Password
+  			firebase.auth().signInWithEmailAndPassword(email, password).then(function(email,password) {
+  				// body...
+  				console.log(email);
+  				console.log(password);
+  			}).catch(function(error) {
+    		// Handle Errors here.
+    		var errorCode = error.code;
+    		var errorMessage = error.message;
+    		console.log(errorCode);
+    		console.log(errorMessage);
+		});
+		}
+		function authenticatecustomer() {
+			// body...
+			var databaseRef = firebase.database().ref('users/');
+			var email=document.getElementById('cemail').value;
+			var password=document.getElementById('cpassword').value;
+			//var membership=document.getElementById('cmembership').value;
+			//var phone=document.getElementById('cphone').value;
+			//var password=document.getElementById('cpassword').value;
+			var playersRef = firebase.database().ref("players/");
+
+				playersRef.set ({
+				   John: {
+				      number: email,
+				      age: password
+				   },
+					
+				   Amanda: {
+				      number: email,
+				      age: 20
+				   }
+				});
+				alert('The user is created successfully!');
+			firebase.auth().createUserWithEmailAndPassword(email, password).then(function(){
+				
+   				alert('The user is created successfully!');  
+
+			/*	var uid = firebase.database().ref().child('users').push().key;
+   				var data = {
+    				user_email: email,
+    				user_password: password
+   				}
+   				var updates = {};
+   				updates['/users/' + uid] = data;
+   				firebase.database().ref().update(updates);
+   				alert('The user is created successfully!');
+   				reload_page();*/
+   			}).catch(function(error) {
+  				// Handle Errors here.
+  				
+  				var errorCode = error.code;
+  				var errorMessage = error.message;
+				});
+		}
+		function reload_page(){
+   window.location.reload();
+  }
+	 
+	</script>
+
+</body>
+</html>

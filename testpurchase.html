@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="resources/css/purchasestyle.css">
+	<link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+	<link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+	<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
+	<script type="text/javascript" src="resources/js/purchasepagejs.js"></script>
+
+</head>
+<body>
+	<header>
+		<nav>
+			<img src="resources/img/logo.png" alt="logo" class="logo">
+			<ul class="main-nav">
+				<li><a href="accountdetail.html"><ion-icon class="icon-big" name="person-circle-outline"></ion-icon></a></li>
+				<li><a href=""><ion-icon class ="icon-big"name="cart"></ion-icon></a></li>
+			</ul>
+		</nav>
+		<section class="product-box">
+				<div class="row rows">
+					<div class="col span-1-of-4 cols">
+						<img id="myImg" src="resources/img/lisbon-3.jpg"  name="lisbon" onclick="openModal(this)" class="hover-shadow" >
+						
+						<div class="city-features">
+							<ion-icon class="icon-small" name="cart"></ion-icon>
+							Add to cart
+						</div>
+						<div class="city-features">
+							<ion-icon class="icon-small" name="camera"></ion-icon>
+							Wildlife Photography.
+						</div>
+						<div class="city-features">
+							<ion-icon class="icon-small" name="logo-instagram"></ion-icon>
+							<a href="#">@__vee_jay</a>
+						</div>
+					</div>
+					<div class="col span-1-of-4 cols">
+						<img id="myImg" name="London" onclick="openModal(this)" class="hover-shadow" src="resources/img/london.jpg">
+						<div class="city-features">
+							<ion-icon class="icon-small" name="cart"></ion-icon>
+							Add to cart
+						</div>
+						<div class="city-features">
+							<ion-icon class="icon-small" name="camera"></ion-icon>
+							Aesthetic Photography.
+						</div>
+						<div class="city-features">
+							<ion-icon class="icon-small" name="logo-instagram"></ion-icon>
+							<a href="#">@__vee_jay</a>
+						</div>
+					</div>
+					<div class="col span-1-of-4 cols">
+						<img id="myImg" name="sanfrancisco"  onclick="openModal(this)" class="hover-shadow" src="resources/img/san-francisco.jpg">
+						<h3>Sanfransisco</h3>
+						<div class="city-features">
+							<ion-icon class="icon-small" name="cart"></ion-icon>
+							Add to cart
+						</div>
+						<div class="city-features">
+							<ion-icon class="icon-small" name="camera"></ion-icon>
+							B/W Photography.
+						</div>
+						<div class="city-features">
+							<ion-icon class="icon-small" name="logo-instagram"></ion-icon>
+							<a href="#">@__vee_jay</a>
+						</div>
+					</div>
+					<div class="col span-1-of-4 cols">
+						<img id="myImg" onclick="openModal(this)" name="berlin" class="hover-shadow"  src="resources/img/berlin.jpg">
+						<h3>Berlin</h3>
+						<div class="city-features">
+							<ion-icon class="icon-small" name="cart"></ion-icon>
+							Add to cart
+						</div>
+						<div class="city-features">
+							<ion-icon class="icon-small" name="camera"></ion-icon>
+							Portrait Photography.
+						</div>
+						<div class="city-features">
+							<ion-icon class="icon-small" name="logo-instagram"></ion-icon>
+							<a href="#">@__vee_jay</a>
+						</div>
+					</div>					
+				</div>
+				<div class="row rows">
+					<div class="col span-1-of-4 cols">
+						<img id="myImg" onclick="openModal(this)" name="lisbon" class="hover-shadow" src="resources/img/lisbon-3.jpg">
+						<h3>lisbon</h3>
+						<div class="city-features">
+							<ion-icon class="icon-small" name="cart"></ion-icon>
+							Add to cart
+						</div>
+						<div class="city-features">
+							<ion-icon class="icon-small" name="camera"></ion-icon>
+							Wildlife Photography.
+						</div>
+						<div class="city-features">
+							<ion-icon class="icon-small" name="logo-instagram"></ion-icon>
+							<a href="#">@__vee_jay</a>
+						</div>
+					</div>
+					<div class="col span-1-of-4 cols">
+						<img id="myImg" onclick="openModal(this)" name="london" class="hover-shadow"  src="resources/img/london.jpg">
+						<h3>London</h3>
+						<div class="city-features">
+							<ion-icon class="icon-small" name="cart"></ion-icon>
+							Add to cart
+						</div>
+						<div class="city-features">
+							<ion-icon class="icon-small" name="camera"></ion-icon>
+							Aesthetic Photography.
+						</div>
+						<div class="city-features">
+							<ion-icon class="icon-small" name="logo-instagram"></ion-icon>
+							<a href="#">@__vee_jay</a>
+						</div>
+					</div>
+					<div class="col span-1-of-4 cols">
+						<img id="myImg" onclick="openModal(this)" name="sanfrancisco" class="hover-shadow"  src="resources/img/san-francisco.jpg">
+						<h3>Sanfransisco</h3>
+						<div class="city-features">
+							<ion-icon class="icon-small" name="cart"></ion-icon>
+							Add to cart
+						</div>
+						<div class="city-features">
+							<ion-icon class="icon-small" name="camera"></ion-icon>
+							B/W Photography.
+						</div>
+						<div class="city-features">
+							<ion-icon class="icon-small" name="logo-instagram"></ion-icon>
+							<a href="#">@__vee_jay</a>
+						</div>
+					</div>
+					<div class="col span-1-of-4 cols">
+						<img id="myImg" onclick="openModal(this)" name="Berlin" class="hover-shadow"  src="resources/img/berlin.jpg">
+						<h3>Berlin</h3>
+						<div class="city-features">
+							<ion-icon class="icon-small" name="cart"></ion-icon>
+							Add to cart
+						</div>
+						<div class="city-features">
+							<ion-icon class="icon-small" name="camera"></ion-icon>
+							Portrait Photography.
+						</div>
+						<div class="city-features">
+							<ion-icon class="icon-small" name="logo-instagram"></ion-icon>
+							<a href="#">@__vee_jay</a>
+						</div>
+					</div>	
+					
+				</div>
+
+
+
+				<!---->
+
+				<!---->
+
+
+
+				<div id="myModal" class="modal">
+			<span class="close" onclick="closeModal()">&times;</span>
+				<div class="row">
+					<img class="col span-1-of-2 modal-content" id="img01">
+					<div class="col span-1-of-2 product-details">
+						<form>
+							<div class="row">
+						<div class="col span-1-of-4">
+							<label for="name">Product name:</label>
+						</div>
+						<div class="col span-1-of-4">
+								<label id="proname"></label>
+						</div>
+						
+					</div>
+					<div class="row">
+						<div class="col span-1-of-4">
+							<label for="email">Product id:</label>
+						</div>
+						<div class="col span-1-of-4">
+							xxx1234
+						</div>
+					</div>
+					<div class="row">
+						<div class="col span-1-of-4">
+							<label for="email">&nbsp;</label>
+						</div>
+						<div class="col span-1-of-4">
+							5x5
+						</div>
+						<div class="col span-1-of-4">
+							10x10
+						</div>
+						<div class="col span-1-of-4">
+							15x15
+						</div>
+					</div>
+					<div class="row">
+						<div class="col span-1-of-4">
+							<label for="email">Frames</label>
+						</div>
+						<div class="col span-1-of-4">
+							<input type="number" name="fmin">
+						</div>
+						<div class="col span-1-of-4">
+							<input type="number" name="fmed">
+						</div>
+						<div class="col span-1-of-4">
+							<input type="number" name="flarge">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col span-1-of-4">
+							<label for="email">Prints</label>
+						</div>
+						<div class="col span-1-of-4">
+							<input type="number" name="pmin">
+						</div>
+						<div class="col span-1-of-4">
+							<input type="number" name="pmed">
+						</div>
+						<div class="col span-1-of-4">
+							<input type="number" name="plarge">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col span-1-of-4">
+							<label for="email">Banners</label>
+						</div>
+						<div class="col span-1-of-4">
+							<input type="number" name="bmin">
+						</div>
+						<div class="col span-1-of-4">
+							<input type="number" name="bmed">
+						</div>
+						<div class="col span-1-of-4">
+							<input type="number" name="blarge">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col span-1-of-4">
+							<label>&nbsp;</label>
+						</div>
+						
+						<div class="col span-1-of-4">
+							<label>&nbsp;</label>
+						</div>
+						<div class="col span-2-of-4">
+							<input type="submit" value="Add to cart">
+						</div>
+					</div>
+							
+						</form>						
+					</div>	
+				</div>						
+		</div>
+		</section>
+	</header>
+
+</body>
+</html>
